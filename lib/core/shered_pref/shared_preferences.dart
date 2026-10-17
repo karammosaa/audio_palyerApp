@@ -22,4 +22,23 @@ class Sheredprefhelper {
   }
 
   //get
+  static String getString({required String key}) {
+    return sharedPreferences.getString(key) ?? "";
+  }
+
+  static int getInt({required String key}) {
+    return sharedPreferences.getInt(key) ?? 0;
+  }
+
+  static bool getBool({required String key}) {
+    return sharedPreferences.getBool(key) ?? false;
+  }
+
+  static List<String> getList({required String key}) {
+    return sharedPreferences.getStringList(key) ?? [];
+  }
+
+  static double getDouble({required String key}) {
+    return sharedPreferences.getDouble(key) ?? 0.0;
+  }
 }
